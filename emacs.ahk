@@ -221,12 +221,12 @@ scroll_down()
 }
 
 
-^x::
-  If is_target()
-    Send %A_ThisHotkey%
-  Else
-    is_pre_x = 1
-  Return 
+;^x::
+;  If is_target()
+;    Send %A_ThisHotkey%
+;  Else
+;    is_pre_x = 1
+;  Return 
 ^f::
   If is_target()
     Send %A_ThisHotkey%
@@ -271,12 +271,12 @@ scroll_down()
 ;;   Else
 ;;     open_line()
 ;;   Return
-^g::
-  If is_target()
-    Send %A_ThisHotkey%
-  Else
-    quit()
-  Return
+;^g::
+;  If is_target()
+;    Send %A_ThisHotkey%
+;  Else
+;    quit()
+;  Return
 ;; ^j::
 ;;   If is_target()
 ;;     Send %A_ThisHotkey%
@@ -295,41 +295,41 @@ scroll_down()
   Else
     indent_for_tab_command()
   Return
-^s::
-  If is_target()
-    Send %A_ThisHotkey%
-  Else
-  {
-    If is_pre_x
-      save_buffer()
-    Else
-      isearch_forward()
-  }
-  Return
+;^s::
+;  If is_target()
+;    Send %A_ThisHotkey%
+;  Else
+;  {
+;    If is_pre_x
+;      save_buffer()
+;    Else
+;      isearch_forward()
+;  }
+;  Return
 ^r::
   If is_target()
     Send %A_ThisHotkey%
   Else
     isearch_backward()
   Return
-^w::
-  If is_target()
-    Send %A_ThisHotkey%
-  Else
-    kill_region()
-  Return
-!w::
-  If is_target()
-    Send %A_ThisHotkey%
-  Else
-    kill_ring_save()
-  Return
-^y::
-  If is_target()
-    Send %A_ThisHotkey%
-  Else
-    yank()
-  Return
+;^w::
+;  If is_target()
+;    Send %A_ThisHotkey%
+;  Else
+;    kill_region()
+;  Return
+;!w::
+;  If is_target()
+;    Send %A_ThisHotkey%
+;  Else
+;    kill_ring_save()
+;  Return
+;^y::
+;  If is_target()
+;    Send %A_ThisHotkey%
+;  Else
+;    yank()
+;  Return
 ^/::
   If is_target()
     Send %A_ThisHotkey%
@@ -391,16 +391,16 @@ scroll_down()
   Else
     backward_char()
   Return
-^v::
-  If is_target()
-    Send %A_ThisHotkey%
-  Else
-    scroll_down()
-  Return
-!v::
-  If is_target()
-    Send %A_ThisHotkey%
-  Else
-    scroll_up()
-  Return
+;^v::
+;  If is_target()
+;    Send %A_ThisHotkey%
+;  Else
+;    scroll_down()
+;  Return
+;!v::
+;  If is_target()
+;    Send %A_ThisHotkey%
+;  Else
+;    scroll_up()
+;  Return
 
