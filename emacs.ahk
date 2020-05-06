@@ -225,12 +225,12 @@ scroll_down()
 }
 
 
-;^x::
-;  If is_target()
-;    Send %A_ThisHotkey%
-;  Else
-;    is_pre_x = 1
-;  Return 
+^x::
+  If is_target()
+    Send %A_ThisHotkey%
+  Else
+    is_pre_x = 1
+  Return 
 ^f::
   If is_target()
     Send %A_ThisHotkey%
@@ -299,23 +299,23 @@ scroll_down()
   Else
     indent_for_tab_command()
   Return
-;^s::
-;  If is_target()
-;    Send %A_ThisHotkey%
-;  Else
-;  {
-;    If is_pre_x
-;      save_buffer()
-;    Else
-;      isearch_forward()
-;  }
-;  Return
-^r::
+^s::
   If is_target()
     Send %A_ThisHotkey%
   Else
-    isearch_backward()
+  {
+    If is_pre_x
+      save_buffer()
+    Else
+      isearch_forward()
+  }
   Return
+;^r::
+;  If is_target()
+;    Send %A_ThisHotkey%
+;  Else
+;    isearch_backward()
+;  Return
 ;^w::
 ;  If is_target()
 ;    Send %A_ThisHotkey%
