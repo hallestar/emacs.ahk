@@ -29,6 +29,10 @@ is_target()
     Return 1
   IfWinActive,ahk_class Vim ; GVIM
     Return 1
+  IfWinActive,ahk_exe pycharm64.exe ; pycharm
+    Return 1    
+  IfWinActive,ahk_exe WindowsTerminal.exe ; pycharm
+    Return 1
 ;  IfWinActive,ahk_class SWT_Window0 ; Eclipse
 ;    Return 1
 ;   IfWinActive,ahk_class Xming X
