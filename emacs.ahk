@@ -242,15 +242,15 @@ scroll_down()
       forward_char()
   }
   Return  
-^c::
-  If is_target()
-    Send %A_ThisHotkey%
-  Else
-  {
-    If is_pre_x
-      kill_emacs()
-  }
-  Return  
+;^c::
+;  If is_target()
+;    Send %A_ThisHotkey%
+;  Else
+;  {
+;    If is_pre_x
+;      kill_emacs()
+;  }
+;  Return  
 ^d::
   If is_target()
     Send %A_ThisHotkey%
@@ -263,12 +263,12 @@ scroll_down()
   Else
     delete_backward_char()
   Return
-^k::
-  If is_target()
-    Send %A_ThisHotkey%
-  Else
-    kill_line()
-  Return
+;^k::
+;  If is_target()
+;    Send %A_ThisHotkey%
+;  Else
+;    kill_line()
+;  Return
 ;; ^o::
 ;;   If is_target()
 ;;     Send %A_ThisHotkey%
@@ -408,3 +408,6 @@ scroll_down()
 ;    scroll_up()
 ;  Return
 
+CapsLock::
+  Send {Esc}
+return
